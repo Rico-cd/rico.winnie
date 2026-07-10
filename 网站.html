@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 顶部导航栏 */
+        header {
+            background: #222831;
+            color: #fff;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .nav-wrap {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 65px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-list {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        .nav-list a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        .nav-list a:hover {
+            color: #00adb5;
+        }
+        /* 横幅区块 */
+        .banner {
+            width: 100%;
+            height: 420px;
+            background: #393e46;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            gap: 15px;
+        }
+        .banner h1 {
+            font-size: 42px;
+        }
+        .banner p {
+            font-size: 17px;
+            color: #cccccc;
+        }
+        .banner-btn {
+            margin-top: 12px;
+            padding: 12px 32px;
+            background: #00adb5;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .banner-btn:hover {
+            background: #009197;
+        }
+        /* 主体内容容器 */
+        main {
+            max-width: 1300px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 45px;
+            color: #222831;
+        }
+        /* 卡片内容区 */
+        .card-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #222831;
+        }
+        .card p {
+            color: #555;
+            font-size: 15px;
+        }
+        /* 空白预留功能模块（后续你加功能放这里） */
+        .func-area {
+            margin: 70px 0;
+            padding: 40px 30px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .func-area h2 {
+            margin-bottom: 15px;
+        }
+        .func-tip {
+            color: #888;
+        }
+        /* 页脚 */
+        footer {
+            background: #222831;
+            color: #aaa;
+            text-align: center;
+            padding: 35px 0;
+            margin-top: 80px;
+        }
+        /* 手机适配 */
+        @media (max-width: 768px) {
+            .nav-wrap {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            .card-box {
+                grid-template-columns: 1fr;
+            }
+            .banner h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">网站名称</div>
+            <ul class="nav-list">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">产品/服务</a></li>
+                <li><a href="#">资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 头部横幅 -->
+    <section class="banner">
+        <h1>网站主标题区域</h1>
+        <p>此处放置网站简介、宣传文案，后续可替换图片轮播</p>
+        <button class="banner-btn">立即了解</button>
+    </section>
+
+    <!-- 页面主体 -->
+    <main>
+        <h2 class="section-title">核心内容板块</h2>
+        <div class="card-box">
+            <div class="card">
+                <h3>模块一</h3>
+                <p>基础内容占位，后续可替换图片、文字、数据展示、功能入口等</p>
+            </div>
+            <div class="card">
+                <h3>模块二</h3>
+                <p>基础内容占位，后续可替换图片、文字、数据展示、功能入口等</p>
+            </div>
+            <div class="card">
+                <h3>模块三</h3>
+                <p>基础内容占位，后续可替换图片、文字、数据展示、功能入口等</p>
+            </div>
+        </div>
+
+        <!-- 预留功能区（专门留给你后续新增功能） -->
+        <div class="func-area">
+            <h2>功能预留区域</h2>
+            <p class="func-tip">后续登录、表单、查询、后台、上传、列表等功能全部写在此区块内</p>
+        </div>
+    </main>
+
+    <!-- 底部页脚 -->
+    <footer>
+        <p>© 2026 网站名称 版权所有 | 备案号：xxx</p>
+    </footer>
+</body>
+</html>
